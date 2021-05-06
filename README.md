@@ -95,6 +95,9 @@ The are no prewritten tests in the source repository, but you can use Cypress to
 
 
 ### Future Development: 
+* Implement searchbar feature
+* Add more ways to filter for animals/shelters
+* Include automatic update of new animals/shelters
 
 
 
