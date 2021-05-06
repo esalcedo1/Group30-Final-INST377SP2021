@@ -1,7 +1,3 @@
-# This is your readme
-You are required to fill it in with documentation similar to that found in the Sequelize example for the course as part of your final project.
-
-sample: https://github.com/Berniez88/finalproject377 (Links to an external site.)
 
 [Heroku](https://dashboard.heroku.com/apps/powerful-plateau-48422)
 # Animal Shelters and Adoptions in Maryland
