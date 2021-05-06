@@ -81,7 +81,3 @@ The are no prewritten tests in the source repository, but you can use Cypress to
 * Implement searchbar feature
 * Add more ways to filter for animals/shelters
 * Include automatic update of new animals/shelters
-
-### How to use Markdown
-Markdown is a text notation system used in Discord, Whatsapp and similar to structure pages without writing HTML at all. You'll be using it for your documentation.
-* [Markdown guide](https://www.markdownguide.org/cheat-sheet/)
