@@ -69,7 +69,7 @@ table, th, td {
 }
 
 .animal_pics {
-  text-align: left;
+  align-items: center;
   right: 150px;
   width: 200px;
   height: 120px;
@@ -98,4 +98,10 @@ table, th, td {
 
 .filters {
   margin-left: 20px;
+}
+.subtitle {
+  padding-top: 30px;
+}
+.info {
+  padding-top: 50px;
 }
