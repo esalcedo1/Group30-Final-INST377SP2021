@@ -190,6 +190,28 @@ router.get('/applicants/:applicant_id', async (req, res) => {
   }
 });
 
+router.post('/applicants', async (req, res) => {
+  console.info('Post request to /applicants', req.body);
+  // This is so we can track what's happening with our request BEFORE we process them
+
+  const applicants = await db.Applicants.findAll();
+  const currentId = (await applicants.length) + 1;
+  try {
+    const newApplicant = await db.Applicants.create({
+      applicant_id : currentId,
+      last_name: req.body.last_name,
+      first_name: req.body.first_name,
+      phone_number: req.body.phone_number,
+      age: req.body.age,
+      email_address: req.body.email_address
+    });
+    res.json(newApplicant);
+  } catch (err) {
+    console.error(err);
+    res.error('Server Error')
+  }
+});
+
 router.put('/applicants', async (req, res) => {
   try {
     // N.B. - this is a good example of where to use code validation to confirm objects
