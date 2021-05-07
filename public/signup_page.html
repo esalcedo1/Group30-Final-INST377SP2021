@@ -28,22 +28,39 @@
         <input class="input" type="text" placeholder="Last is also the worse!">
       </div>  
     </div>
-    <div class="field">
-      <label class="label">Age</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Don't lie. We'll know.">
-      </div>  
-    </div>
+    
+    <div class='dropdown'>
+      <div class='dropdown-trigger'>
+        <button class="button" aria-haspopup="false" aria-controls="dropdown-menu">
+          <span>Age</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item">
+            18
+          </a>
+          <hr class="dropdown-divider">
+          <a href="#" class="dropdown-item">
+            19
+          </a>
+        </div>
+      </div>
+    </div>  
+
     <div class="field">
       <label class="label">Email Address</label>
       <div class="control">
-        <input class="input" type="email" placeholder="Wonder if we'll get any AOL users...">
+        <input class="input" type="email" placeholder="Email Address">
       </div>  
     </div>
     <div class="field">
       <label class="label">Phone Number</label>
       <div class="control">
-        <input class="input" type="email" placeholder="We'll call you maybe!">
+        <input class="input" type="email" placeholder="To call once we've found a pet for you!">
       </div>  
     </div>    
   </div>
