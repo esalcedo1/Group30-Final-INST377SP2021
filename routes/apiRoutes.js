@@ -131,6 +131,24 @@ router.put('/animals', async (req, res) => {
   }
 });
 
+router.post('/animals', async (req, res) => {
+  const animals = await db.Animals.findAll();
+  const currentId = (await animals.length) + 1;
+  try {
+    const newAnimals = await db.Animals.create({
+      animal_id: currentId,
+      name: req.body.name,
+      status: req.body.status,
+      gender: req.body.gender,
+      Animal_type_species_id: req.body.Animal_type_species_id
+    });
+    res.json(newAnimals);
+  } catch (err) {
+    console.error(err);
+    res.json('Server error');
+  }
+});
+
 router.delete('/animals', async (req, res) => {
   try {
     await db.Animals.destroy({
