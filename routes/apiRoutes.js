@@ -100,7 +100,7 @@ router.post('/animals', async (req, res) => {
       name: req.body.name,
       status: req.body.status,
       gender: req.body.status,
-      Animal_type_species_id: req.body.Animal_type_species_id,
+      Animal_type_species_id: req.body.Animal_type_species_id
     });
     res.json(newAnimal);
   } catch (err) {
