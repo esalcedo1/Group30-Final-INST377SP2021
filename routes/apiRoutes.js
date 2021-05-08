@@ -88,6 +88,27 @@ router.get('/animals/:animal_id', async (req, res) => {
   }
 });
 
+router.post('/animals', async (req, res) => {
+  console.info('Post request to /animals', req.body);
+  // This is so we can track what's happening with our request BEFORE we process them
+
+  const animals = await db.Animals.findAll();
+  const currentId = (await animals.length) + 1;
+  try {
+    const newAnimal = await db.Animals.create({
+      animal_id : currentId,
+      name: req.body.name,
+      status: req.body.status,
+      gender: req.body.status,
+      Animal_type_species_id: req.body.Animal_type_species_id,
+    });
+    res.json(newAnimal);
+  } catch (err) {
+    console.error(err);
+    res.error('Server Error')
+  }
+});
+
 router.put('/animals', async (req, res) => {
   try {
     await db.Animals.update(
@@ -166,6 +187,28 @@ router.get('/applicants/:applicant_id', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.error('Server error');
+  }
+});
+
+router.post('/applicants', async (req, res) => {
+  console.info('Post request to /applicants', req.body);
+  // This is so we can track what's happening with our request BEFORE we process them
+
+  const applicants = await db.Applicants.findAll();
+  const currentId = (await applicants.length) + 1;
+  try {
+    const newApplicant = await db.Applicants.create({
+      applicant_id : currentId,
+      last_name: req.body.last_name,
+      first_name: req.body.first_name,
+      phone_number: req.body.phone_number,
+      age: req.body.age,
+      email_address: req.body.email_address
+    });
+    res.json(newApplicant);
+  } catch (err) {
+    console.error(err);
+    res.error('Server Error')
   }
 });
 
