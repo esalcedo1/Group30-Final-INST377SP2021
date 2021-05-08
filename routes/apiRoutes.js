@@ -99,7 +99,7 @@ router.post('/animals', async (req, res) => {
       animal_id : currentId,
       name: req.body.name,
       status: req.body.status,
-      gender: req.body.status,
+      gender: req.body.gender,
       Animal_type_species_id: req.body.Animal_type_species_id,
     });
     res.json(newAnimal);
