@@ -1,5 +1,5 @@
 
-[Heroku](https://dashboard.heroku.com/apps/powerful-plateau-48422)
+[Heroku](http://powerful-plateau-48422.herokuapp.com)
 # Animal Shelters and Adoptions in Maryland
 ## Description
 Over the past year, there has been an uptick in the number of people looking to adopt animals with one article from The Washington Post reporting that some shelters have seen double the adoption rate than pre-COVID. Our application aims to centralize the animals of many shelter databases into a single one as well as provide information about the associated costs of caring for that animal. In doing so, we hope to get more eyes on these animals and reduce the information incognizance and overload traditionally felt when going through this process. Our target audience is aimed towards employees & adminisrators of these animal shelters so they can view each shelter and their data.
